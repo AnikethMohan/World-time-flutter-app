@@ -1,6 +1,7 @@
 import 'package:http/http.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
+import 'package:intl/intl.dart';
 
 class WorldTime{
 
@@ -8,7 +9,8 @@ class WorldTime{
   late String location;//location name for the UI
   late String time;//the time in that location
   late String flag;//url to an asset flag icon
-  late String url;
+  late String url;//location url for api endpoint
+    late bool isdaytime;
   WorldTime({ required this.location,required this.flag,required this.url});
 
   Future<void> getTime() async {
@@ -22,8 +24,9 @@ class WorldTime{
       String datetime = data['datetime'];
       DateTime now = DateTime.parse(datetime.substring(0, 26));
       //
+      isdaytime = now.hour>6&&now.hour<19 ? true: false;
 
-      time = now.toString();
+     time=DateFormat.jm().format(now);
     }
     catch(e){
       print('Error found$e');

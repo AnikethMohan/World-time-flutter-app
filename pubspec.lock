@@ -69,6 +69,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  flutter_spinkit:
+    dependency: "direct main"
+    description:
+      name: flutter_spinkit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.1.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -88,6 +95,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.1"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.17.0"
   lints:
     dependency: transitive
     description:
@@ -116,15 +130,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  multiselect_formfield:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "67fdc8a632186b657bc7ec35dcb6dfa194ad6e71"
-      url: "https://github.com/hitshydev/multiselect_formfield"
-    source: git
-    version: "0.1.6"
   path:
     dependency: transitive
     description:
@@ -195,3 +200,4 @@ packages:
     version: "2.1.2"
 sdks:
   dart: ">=2.17.6 <3.0.0"
+  flutter: ">=2.0.0"
